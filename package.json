@@ -1,0 +1,38 @@
+{
+  "name": "kafka-faker",
+  "version": "0.0.1",
+  "description": "A Kafka Faker Service which can use used to produce fake messages into kafka streams",
+  "main": "src/index.js",
+  "scripts": {
+    "run": "node src/index.js",
+    "test": "mocha",
+    "dev": "nodemon src/index.js",
+    "build:image": "docker build -t kafka-faker ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvinashSKaranth/kafka-faker.git"
+  },
+  "keywords": [
+    "kafka",
+    "producer",
+    "docker",
+    "api",
+    "endpoint",
+    "test"
+  ],
+  "author": "Avinash S Karanth",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/AvinashSKaranth/kafka-faker/issues"
+  },
+  "homepage": "https://github.com/AvinashSKaranth/kafka-faker#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "faker": "^5.5.3",
+    "kafkajs": "^1.15.0"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.4"
+  }
+}
