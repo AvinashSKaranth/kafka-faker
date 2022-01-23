@@ -34,6 +34,17 @@ services:
       JVM_OPTS: "-Xms16M -Xmx48M -Xss180K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
     depends_on:
       - "kafka"
+  kafka-faker:
+    image: avinashskaranth/kafka-faker
+    ports:
+      - "9091:9091"
+    volumes:
+      - "./producer:/home/node/app/producer"
+    environment:
+      PORT: "9091"
+    depends_on:
+      - "kafka"
+
 volumes:
   zookeeper_data:
     driver: local

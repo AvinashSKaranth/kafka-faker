@@ -1,13 +1,13 @@
 {
   "name": "kafka-faker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Kafka Faker Service which can use used to produce fake messages into kafka streams",
   "main": "src/index.js",
   "scripts": {
     "run": "node src/index.js",
     "test": "mocha",
     "dev": "nodemon src/index.js",
-    "build:image": "docker build -t kafka-faker ."
+    "publish": "docker build -t avinashskaranth/kafka-faker:%npm_package_version% -t avinashskaranth/kafka-faker:latest . & docker push avinashskaranth/kafka-faker"
   },
   "repository": {
     "type": "git",

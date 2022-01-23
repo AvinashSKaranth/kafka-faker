@@ -45,6 +45,7 @@ async function produce(producer, topic, messages) {
   if (producer != null) {
     let messages_local = JSON.parse(JSON.stringify(messages));
     messages_local.forEach(function (part, i, arr) {
+      arr[i].key = faker.fake(arr[i].key);
       arr[i].value = faker.fake(arr[i].value);
     });
     await producer.send({

@@ -4,6 +4,6 @@ WORKDIR /home/node/app
 COPY package*.json ./
 USER node
 RUN npm ci
-COPY --chown=node:node . .
+COPY --chown=node:node ./src ./src
 EXPOSE 9091
 CMD [ "node", "src/index.js" ]
